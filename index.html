@@ -7,292 +7,54 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --bg: #F5F2EE;
-    --surface: #FFFFFF;
-    --border: #E0DBD4;
-    --text: #1A1714;
-    --text-muted: #7A7470;
-    --accent: #2B5C3F;
-    --accent-light: #EAF3EE;
-    --accent-border: #B5D4C0;
-    --danger: #8C2D1F;
-    --danger-light: #FBEFED;
-    --danger-border: #F0B8B0;
+    --bg: #F5F2EE; --surface: #FFFFFF; --border: #E0DBD4; --text: #1A1714; --text-muted: #7A7470;
+    --accent: #2B5C3F; --accent-light: #EAF3EE; --accent-border: #B5D4C0;
+    --danger: #8C2D1F; --danger-light: #FBEFED; --danger-border: #F0B8B0;
     --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
   }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    padding: 2rem 1rem 4rem;
-  }
-
-  .page-wrap {
-    max-width: 560px;
-    margin: 0 auto;
-  }
-
-  header {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .tn-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--accent);
-    color: #fff;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-  }
-
-  h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 1.25;
-    color: var(--text);
-    margin-bottom: 0.4rem;
-  }
-
-  .subtitle {
-    font-size: 14px;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem;
-    margin-bottom: 1rem;
-    box-shadow: var(--shadow);
-  }
-
-  .card-title {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    margin-bottom: 1rem;
-  }
-
-  .adult-row {
-    display: grid;
-    grid-template-columns: 1fr 160px auto;
-    gap: 8px;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-
-  .adult-label {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-bottom: 4px;
-  }
-
-  .input-wrap {
-    position: relative;
-  }
-
-  .input-wrap .prefix {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted);
-    font-size: 14px;
-    pointer-events: none;
-  }
-
-  input[type="number"], select {
-    width: 100%;
-    height: 40px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    transition: border-color 0.15s, box-shadow 0.15s;
-    appearance: none;
-    -webkit-appearance: none;
-  }
-
-  input[type="number"] {
-    padding: 0 10px 0 24px;
-  }
-
-  select {
-    padding: 0 28px 0 10px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237A7470' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    cursor: pointer;
-  }
-
-  input[type="number"]:focus, select:focus {
-    outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(43,92,63,0.12);
-    background: #fff;
-  }
-
-  .remove-btn {
-    width: 32px;
-    height: 32px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    background: none;
-    color: var(--text-muted);
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-    transition: background 0.15s, color 0.15s;
-    flex-shrink: 0;
-  }
-
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 2rem 1rem 4rem; }
+  .page-wrap { max-width: 560px; margin: 0 auto; }
+  header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+  .tn-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: #fff; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 1rem; }
+  h1 { font-family: 'DM Serif Display', serif; font-size: 28px; font-weight: 400; line-height: 1.25; color: var(--text); margin-bottom: 0.4rem; }
+  .subtitle { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1rem; box-shadow: var(--shadow); }
+  .card-title { font-size: 12px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+  .adult-row { display: grid; grid-template-columns: 1fr 160px auto; gap: 8px; align-items: center; margin-bottom: 8px; }
+  .adult-label { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+  .input-wrap { position: relative; }
+  .input-wrap .prefix { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 14px; pointer-events: none; }
+  input[type="number"], select { width: 100%; height: 40px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14px; transition: border-color 0.15s, box-shadow 0.15s; appearance: none; -webkit-appearance: none; }
+  input[type="number"] { padding: 0 10px 0 24px; }
+  select { padding: 0 28px 0 10px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237A7470' d='M6 8L1 3h10z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; cursor: pointer; }
+  input[type="number"]:focus, select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(43,92,63,0.12); background: #fff; }
+  .remove-btn { width: 32px; height: 32px; border: 1px solid var(--border); border-radius: 6px; background: none; color: var(--text-muted); font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; line-height: 1; transition: background 0.15s, color 0.15s; flex-shrink: 0; }
   .remove-btn:hover { background: var(--danger-light); color: var(--danger); border-color: var(--danger-border); }
-
-  .add-btn {
-    width: 100%;
-    height: 36px;
-    background: none;
-    border: 1px dashed var(--accent-border);
-    border-radius: 8px;
-    color: var(--accent);
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    margin-top: 4px;
-    transition: background 0.15s;
-  }
-
+  .add-btn { width: 100%; height: 36px; background: none; border: 1px dashed var(--accent-border); border-radius: 8px; color: var(--accent); font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; cursor: pointer; margin-top: 4px; transition: background 0.15s; }
   .add-btn:hover { background: var(--accent-light); }
-
-  .hh-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
+  .hh-row { display: flex; align-items: center; gap: 12px; }
   .hh-row input { width: 80px; padding: 0 10px; text-align: center; }
   .hh-note { font-size: 13px; color: var(--text-muted); }
-
-  .calc-btn {
-    width: 100%;
-    height: 48px;
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 0.25rem;
-    transition: opacity 0.15s, transform 0.1s;
-  }
-
+  .calc-btn { width: 100%; height: 48px; background: var(--accent); color: #fff; border: none; border-radius: 10px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 0.25rem; transition: opacity 0.15s, transform 0.1s; }
   .calc-btn:hover { opacity: 0.9; }
   .calc-btn:active { transform: scale(0.99); }
-
-  .result {
-    border-radius: 12px;
-    padding: 1.25rem;
-    margin-top: 1rem;
-    display: none;
-    box-shadow: var(--shadow);
-  }
-
-  .result.eligible {
-    background: var(--accent-light);
-    border: 1px solid var(--accent-border);
-  }
-
-  .result.ineligible {
-    background: var(--danger-light);
-    border: 1px solid var(--danger-border);
-  }
-
-  .result-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
+  .result { border-radius: 12px; padding: 1.25rem; margin-top: 1rem; display: none; box-shadow: var(--shadow); }
+  .result.eligible { background: var(--accent-light); border: 1px solid var(--accent-border); }
+  .result.ineligible { background: var(--danger-light); border: 1px solid var(--danger-border); }
+  .result-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
   .eligible .result-icon { background: var(--accent); }
   .ineligible .result-icon { background: var(--danger); }
-
-  .result-verdict {
-    font-family: 'DM Serif Display', serif;
-    font-size: 22px;
-    font-weight: 400;
-    margin-bottom: 6px;
-  }
-
+  .result-verdict { font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 6px; }
   .eligible .result-verdict { color: var(--accent); }
   .ineligible .result-verdict { color: var(--danger); }
-
-  .result-numbers {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-top: 1rem;
-  }
-
-  .stat {
-    background: rgba(255,255,255,0.6);
-    border-radius: 8px;
-    padding: 10px 12px;
-  }
-
+  .result-numbers { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 1rem; }
+  .stat { background: rgba(255,255,255,0.6); border-radius: 8px; padding: 10px 12px; }
   .stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
   .stat-value { font-size: 17px; font-weight: 600; color: var(--text); }
-
-  .result-note {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-top: 10px;
-    line-height: 1.6;
-    padding-top: 10px;
-    border-top: 1px solid rgba(0,0,0,0.06);
-  }
-
-  footer {
-    margin-top: 2.5rem;
-    font-size: 12px;
-    color: var(--text-muted);
-    text-align: center;
-    line-height: 1.7;
-  }
-
-  @media (max-width: 480px) {
-    .adult-row { grid-template-columns: 1fr 1fr auto; }
-    h1 { font-size: 24px; }
-  }
+  .result-note { font-size: 12px; color: var(--text-muted); margin-top: 10px; line-height: 1.6; padding-top: 10px; border-top: 1px solid rgba(0,0,0,0.06); }
+  footer { margin-top: 2.5rem; font-size: 12px; color: var(--text-muted); text-align: center; line-height: 1.7; }
+  @media (max-width: 480px) { .adult-row { grid-template-columns: 1fr 1fr auto; } h1 { font-size: 24px; } }
 </style>
 </head>
 <body>
@@ -303,12 +65,30 @@
       Hamilton County Early Learning Department
     </div>
     <h1>VPK Income Eligibility Calculator</h1>
-    <p class="subtitle">2026–2027 school year · Based on 185% of 2026 HHS Poverty Guidelines</p>
+    <p class="subtitle">2026&ndash;2027 school year &middot; Based on 185% of 2026 HHS Poverty Guidelines</p>
   </header>
 
   <div class="card">
     <p class="card-title">Adult gross income(s)</p>
-    <div id="adults-list"></div>
+    <div id="adults-list">
+      <div id="adult-row-1" style="margin-bottom:12px;">
+        <p class="adult-label">Adult 1</p>
+        <div class="adult-row">
+          <div class="input-wrap">
+            <span class="prefix">$</span>
+            <input type="number" min="0" step="0.01" placeholder="0.00" id="inc-1">
+          </div>
+          <select id="pay-1">
+            <option value="annual">Annual</option>
+            <option value="monthly">Monthly</option>
+            <option value="twicemonth">Twice / month</option>
+            <option value="biweekly" selected>Every 2 weeks</option>
+            <option value="weekly">Weekly</option>
+          </select>
+          <div style="width:32px"></div>
+        </div>
+      </div>
+    </div>
     <button class="add-btn" onclick="addAdult()">+ Add another adult</button>
   </div>
 
@@ -340,51 +120,50 @@
 
   <footer>
     <p>This calculator is for VPK income screening only and may not be used for Free or Reduced Priced Lunch eligibility.</p>
-    <p style="margin-top:4px;">Questions? Contact <a href="/cdn-cgi/l/email-protection#c99d8d868ce78ca8bba5b085aca8bba7a0a7ae89bda7e7aea6bf" style="color:var(--accent);"><span class="__cf_email__" data-cfemail="0b5f4f444e254e6a796772476e6a796562656c4b7f65256c647d">[email&#160;protected]</span></a></p>
+    <p style="margin-top:4px;">Questions? Contact TDOE.EarlyLearning@tn.gov</p>
   </footer>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-const MULTIPLIERS = { annual:1, monthly:12, twicemonth:24, biweekly:26, weekly:52 };
-const LIMITS = { 1:29526,2:40034,3:50542,4:61050,5:71558,6:82066,7:92574,8:103082 };
-const ADD_PER = 10508;
-let adultCount = 0;
-let adultIds = [];
+<script>
+var MULTIPLIERS = { annual:1, monthly:12, twicemonth:24, biweekly:26, weekly:52 };
+var LIMITS = { 1:29526, 2:40034, 3:50542, 4:61050, 5:71558, 6:82066, 7:92574, 8:103082 };
+var ADD_PER = 10508;
+var adultCount = 1;
+var adultIds = [1];
 
 function addAdult() {
   adultCount++;
-  const id = adultCount;
+  var id = adultCount;
   adultIds.push(id);
-  const list = document.getElementById('adults-list');
-  const div = document.createElement('div');
+  var list = document.getElementById('adults-list');
+  var div = document.createElement('div');
   div.id = 'adult-row-' + id;
   div.style.marginBottom = '12px';
-  div.innerHTML = `
-    <p class="adult-label">Adult ${adultIds.indexOf(id)+1}</p>
-    <div class="adult-row">
-      <div class="input-wrap">
-        <span class="prefix">$</span>
-        <input type="number" min="0" step="0.01" placeholder="0.00" id="inc-${id}">
-      </div>
-      <select id="pay-${id}">
-        <option value="annual">Annual</option>
-        <option value="monthly">Monthly</option>
-        <option value="twicemonth">Twice / month</option>
-        <option value="biweekly" selected>Every 2 weeks</option>
-        <option value="weekly">Weekly</option>
-      </select>
-      ${id > 1 ? `<button class="remove-btn" onclick="removeAdult(${id})" title="Remove">×</button>` : '<div style="width:32px"></div>'}
-    </div>`;
+  var html = '<p class="adult-label">Adult ' + adultIds.length + '</p>';
+  html += '<div class="adult-row">';
+  html += '<div class="input-wrap"><span class="prefix">$</span>';
+  html += '<input type="number" min="0" step="0.01" placeholder="0.00" id="inc-' + id + '"></div>';
+  html += '<select id="pay-' + id + '">';
+  html += '<option value="annual">Annual</option>';
+  html += '<option value="monthly">Monthly</option>';
+  html += '<option value="twicemonth">Twice / month</option>';
+  html += '<option value="biweekly" selected>Every 2 weeks</option>';
+  html += '<option value="weekly">Weekly</option>';
+  html += '</select>';
+  html += '<button class="remove-btn" onclick="removeAdult(' + id + ')" title="Remove">&times;</button>';
+  html += '</div>';
+  div.innerHTML = html;
   list.appendChild(div);
 }
 
 function removeAdult(id) {
-  const row = document.getElementById('adult-row-' + id);
-  if (row) row.remove();
-  adultIds = adultIds.filter(i => i !== id);
-  document.querySelectorAll('.adult-label').forEach((el, i) => {
-    el.textContent = 'Adult ' + (i + 1);
-  });
+  var row = document.getElementById('adult-row-' + id);
+  if (row) { row.remove(); }
+  adultIds = adultIds.filter(function(i) { return i !== id; });
+  var labels = document.querySelectorAll('.adult-label');
+  for (var i = 0; i < labels.length; i++) {
+    labels[i].textContent = 'Adult ' + (i + 1);
+  }
 }
 
 function fmt(n) {
@@ -392,28 +171,32 @@ function fmt(n) {
 }
 
 function checkEligibility() {
-  let totalAnnual = 0;
-  adultIds.forEach(id => {
-    const inc = parseFloat(document.getElementById('inc-'+id)?.value) || 0;
-    const pay = document.getElementById('pay-'+id)?.value || 'annual';
+  var totalAnnual = 0;
+  for (var i = 0; i < adultIds.length; i++) {
+    var id = adultIds[i];
+    var incEl = document.getElementById('inc-' + id);
+    var payEl = document.getElementById('pay-' + id);
+    var inc = incEl ? (parseFloat(incEl.value) || 0) : 0;
+    var pay = payEl ? payEl.value : 'annual';
     totalAnnual += inc * (MULTIPLIERS[pay] || 1);
-  });
-
-  const hhSize = Math.max(1, parseInt(document.getElementById('hh-size').value) || 1);
-  const limit = hhSize <= 8 ? LIMITS[hhSize] : LIMITS[8] + (hhSize - 8) * ADD_PER;
-
-  const box = document.getElementById('result-box');
-  const eligible = totalAnnual <= limit;
-
+  }
+  var hhSize = Math.max(1, parseInt(document.getElementById('hh-size').value) || 1);
+  var limit = hhSize <= 8 ? LIMITS[hhSize] : LIMITS[8] + (hhSize - 8) * ADD_PER;
+  var box = document.getElementById('result-box');
+  var eligible = totalAnnual <= limit;
   box.className = 'result ' + (eligible ? 'eligible' : 'ineligible');
   box.style.display = 'block';
-
-  document.getElementById('result-icon').innerHTML = eligible
-    ? '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>'
-    : '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4.5 4.5l9 9M13.5 4.5l-9 9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
-
+  var checkSvg = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9l4.5 4.5L15 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var xSvg = '<svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4.5 4.5l9 9M13.5 4.5l-9 9" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>';
+  document.getElementById('result-icon').innerHTML = eligible ? checkSvg : xSvg;
   document.getElementById('result-verdict').textContent = eligible ? 'Likely eligible' : 'Does not meet income criteria';
   document.getElementById('stat-income').textContent = fmt(totalAnnual);
   document.getElementById('stat-limit').textContent = fmt(limit);
   document.getElementById('result-note').textContent = eligible
-    ? 'This household meets the income criteria for the 2026-2027 VPK program. Note: meeting income eligibility does not guarantee acceptance due to lim
+    ? 'This household meets the income criteria for the 2026-2027 VPK program. Note: meeting income eligibility does not guarantee acceptance due to limited space.'
+    : 'Total household income exceeds the limit for a household of ' + hhSize + '. Families must be at or below the limit to qualify.';
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+</body>
+</html>
